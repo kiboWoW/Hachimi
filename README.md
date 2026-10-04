@@ -5,7 +5,7 @@ A cute, low-cost quadruped robot dog built with an ESP32S3, PCA9685 servo driver
 
 ## Final Build
 
-![Final Build](images/finalbuild.jpg)
+![Final Build](images/finalbuild.jpeg)
 
 *Completed quadruped robot dog prototype.*
 
@@ -223,6 +223,3 @@ Prototype complete — eight-servo movement, Wi-Fi webpage control, OLED feedbac
 
 ---
 
-## License
-
-[Add your license here — for example, MIT, GPL-3.0, or Apache-2.0.]
