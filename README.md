@@ -26,7 +26,7 @@ The robot can:
 
 ## What Makes It Different
 
-- **Low-cost hardware** using commonly available ESP32 and servo components
+- **Low-cost hardware** using commonly available ESP32S3 and servo components
 - **Eight-servo coordination** for independent hip and foot movement
 - **Wireless control** without requiring an internet connection
 - **Expressive movement** through handshake and hello gestures
@@ -53,7 +53,7 @@ The robot can:
 
 ## Pin Connections
 
-### ESP32 to PCA9685
+### ESP32S3 to PCA9685
 
 | ESP32 | PCA9685 |
 |---|---|
@@ -75,7 +75,7 @@ The OLED shares the same I2C bus as the PCA9685.
 
 ### Status LED
 
-| Component | ESP32 GPIO |
+| Component | ESP32S3 GPIO |
 |---|---:|
 | Hello LED | GPIO2 |
 
@@ -100,12 +100,12 @@ Use a current-limiting resistor, typically between 220Ω and 330Ω, in series wi
 
 ## How It Works
 
-1. The ESP32 initializes the PCA9685, OLED, servos, and Wi-Fi access point.
+1. The ESP32S3 initializes the PCA9685, OLED, servos, and Wi-Fi access point.
 2. The robot moves to its calibrated standing position.
 3. A phone or computer connects to the robot’s Wi-Fi network.
 4. The user opens the robot’s local webpage.
 5. The selected command is sent to the ESP32.
-6. The ESP32 runs the corresponding servo movement sequence.
+6. The ESP32S3 runs the corresponding servo movement sequence.
 7. The OLED displays the current action.
 8. The robot returns to its normal standing position after greeting actions.
 
@@ -197,7 +197,7 @@ Do not power all eight servos directly from the ESP32.
 Use:
 
 - A separate power supply for the servos
-- A common ground between the ESP32, PCA9685, and servo supply
+- A common ground between the ESP32S3, PCA9685, and servo supply
 - Adequate current capacity for simultaneous servo movement
 - Mechanical travel limits to prevent servo damage
 
@@ -205,17 +205,6 @@ Test the robot with its legs lifted from the ground before testing walking or gr
 
 ---
 
-## Project Structure
-
-```text
-RobotDog/
-├── RobotDog_WiFi_OLED_Hello.ino
-├── README.md
-└── images/
-    └── final_build.jpg
-```
-
----
 
 ## Status
 
